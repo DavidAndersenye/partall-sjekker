@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Partall eller Oddetall?</title>
+</head>
+<body>
+    <h1>Sjekk om et tall er partall eller oddetall</h1>
+
+    <label for="tallInput">Skriv inn et tall:</label>
+    <input type="text" id="tallInput">
+
+    <button onclick="sjekkTall()">Sjekk</button>
+
+    <p id="resultat"></p>
+
+    <script>
+        function sjekkTall() {
+            
+            var inputElement = document.getElementById("tallInput");
+            var tall = parseInt(inputElement.value);
+
+
+            if (tall % 2 === 0) {
+                document.getElementById("resultat").textContent = "Tallet " + tall + " er et partall.";
+            } else {
+                document.getElementById("resultat").textContent = "Tallet " + tall + " er et oddetall.";
+            }
+        }
+    </script>
+</body>
+</html>
